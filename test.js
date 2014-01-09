@@ -1,27 +1,7 @@
-(function() {
-console.log("hello");
-})();
-
-
-var myApp = angular.module('myApp', []);
-myApp.factory('Data', function() {
-    return {message: "hello"};
-});
-
-myApp.filter('reverse', function() {
-    return function(message) {
-        return message.split("").reverse().join("");
-    };
-});
-
-function FirstCtrl($scope, Data) {
-    $scope.data = Data;
-}
-
-function SecondCtrl($scope, Data) {
-    $scope.data = Data;
-
-    $scope.reverse = function(message) {
-        return message.split("").reverse().join("");
-    };
-}
+/**
+ * Created with IntelliJ IDEA.
+ * User: psand
+ * Date: 2014-01-08
+ * Time: 16:02
+ * To change this template use File | Settings | File Templates.
+ */
