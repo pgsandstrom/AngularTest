@@ -2,8 +2,8 @@
     console.log("helloz!!!");
 })();
 
-
 var myApp = angular.module('myApp', []);
+
 myApp.factory('Data', function () {
     return {message: "hello"};
 });
@@ -14,15 +14,15 @@ myApp.filter('reverse', function () {
     };
 });
 
-function FirstCtrl($scope, Data) {
+myApp.controller('FirstCtrl', function FirstCtrl($scope, Data) {
     $scope.data = Data;
     $scope.text = 'text';
-}
+});
 
-function SecondCtrl($scope, Data) {
+myApp.controller('SecondCtrl', function SecondCtrl($scope, Data) {
     $scope.data = Data;
 
-    $scope.reverse = function (message) {
+    $scope.myReverse = function (message) {
         return message.split("").reverse().join("");
     };
-}
+});
