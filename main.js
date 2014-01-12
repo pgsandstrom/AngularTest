@@ -14,6 +14,13 @@ myApp.filter('reverse', function () {
     };
 });
 
+myApp.directive('myDirective', function() {
+    return {
+        restrict: "E",
+        template: "<div>Oj, sicket directive va!?</div>"
+    };
+});
+
 myApp.controller('FirstCtrl', function FirstCtrl($scope, Data) {
     $scope.data = Data;
     $scope.text = 'text';
